@@ -69,7 +69,7 @@ h2 {
 /* TODO: Add flexbox styles for .about-content here (display: flex, align-items: center, gap: 30px) */
 .about-content {
     display: flex;
-    text-align: center;
+    align-items: center;
     gap: 30px;
 }
 
