@@ -26,12 +26,26 @@ header {
 }
 
 /* TODO: Add h1 styles here (2.5em, #2c3e50, margin-bottom: 10px) */
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
 
 
 /* TODO: Add header h2 styles here (1.5em, #3498db, margin-bottom: 10px) */
+h2 {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
 
 
 /* TODO: Add header p styles here (1.2em, #666) */
+p {
+    font-size: 1.2em;
+    color: #666;
+}
 
 
 /* ============================================
@@ -39,13 +53,25 @@ header {
    Style all section h2 elements and about section layout
    ============================================ */
 /* TODO: Add section h2 styles here (2em, #3498db, margin-bottom: 30px, center aligned) */
+h2 {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 30px;
+    text-align: center;
+}
 
 
 .about-section {
     margin-bottom: 50px;
+    
 }
 
 /* TODO: Add flexbox styles for .about-content here (display: flex, align-items: center, gap: 30px) */
+.about-content {
+    display: flex;
+    text-align: center;
+    gap: 30px;
+}
 
 
 .profile-image {
@@ -70,6 +96,11 @@ header {
 }
 
 /* TODO: Add CSS Grid for .skills-grid here (display: grid, 3 columns with repeat(3, 1fr), 20px gap) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
 
 .projects-section {
@@ -77,6 +108,11 @@ header {
 }
 
 /* TODO: Add CSS Grid for .projects-grid here (display: grid, 2 columns with repeat(2, 1fr), 20px gap) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 
 .project-image {
@@ -92,6 +128,11 @@ header {
 }
 
 /* TODO: Add CSS Grid for .contact-grid here (display: grid, 4 columns with repeat(4, 1fr), 20px gap) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
 
 
 /* ============================================
@@ -100,6 +141,15 @@ header {
    ============================================ */
 /* TODO: Add card styles for .skill-card, .project-card, .contact-item here 
    (white background, 20px padding, 8px border-radius, box-shadow: 0 2px 8px rgba(0,0,0,0.1)) */
+
+.skill-card ,
+.project-card ,
+.contact-item  {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 
 .skill-card h3,
@@ -118,9 +168,23 @@ header {
 /* TODO: Add button styles for .view-btn here 
    (background-color: #3498db, color: white, border: none, padding: 10px 20px, 
    border-radius: 5px, cursor: pointer, font-size: 1em, margin-top: 15px) */
+.view-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+}
+   
 
 
 /* TODO: Add hover effect for .view-btn here (background-color: #2980b9) */
+.view-btn:hover {
+    background-color: #2980b9;
+}
 
 
 /* ============================================
@@ -130,13 +194,21 @@ header {
    ============================================ */
 @media (max-width: 1023px) {
     /* TODO: Change skills-grid to 2 columns (grid-template-columns: repeat(2, 1fr)) */
+.skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
     
-
     /* TODO: Change contact-grid to 2 columns (grid-template-columns: repeat(2, 1fr)) */
+.contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
     
-
     /* TODO: Change about-content to column direction and center text 
        (flex-direction: column, text-align: center) */
+.about-content {
+    flex-direction: column;
+    text-align: center;
+}
     
 }
 
@@ -147,14 +219,33 @@ header {
    ============================================ */
 @media (max-width: 767px) {
     /* TODO: Reduce body padding to 15px */
+body {
+    padding: 15px;
+}
     
 
     /* TODO: Change all grids to 1 column (.skills-grid, .projects-grid, .contact-grid: grid-template-columns: 1fr) */
+.skills-grid,
+.projects-grid,
+.contact-grid {
+    grid-template-columns: 1fr;
+}
     
 
     /* TODO: Adjust about-content for mobile (flex-direction: column, text-align: center) */
+.about-content {
+    flex-direction: column;
+    text-align: center;
+}
     
 
     /* TODO: Reduce font sizes for mobile (h1: 2em, section h2: 1.8em) */
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
     
 }
