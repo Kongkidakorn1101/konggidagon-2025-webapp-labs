@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <script>
+        let username = "Kongkidakorn1101";
+
+        let promise = fetch(`https://api.github.com/users/${username}`)
+
+        promise
+            .then(res => res.json())
+            .then(data => {
+                document.body.innerHTML += `<h1>
+                    <a href="${data.html_url}" target="_blank">${data.name || data.login}</a>
+            </h1>
+            <img src="${data.avatar_url}" alt="${data.login}" width="200">`;
+            })
+
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            border: 5px solid blue;
+            border-radius: 50%;
+        }
+    </style>
+
+</body>
+
+</html>
