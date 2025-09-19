@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h2>Reading Students Information</h2>
+    <ol id="studentinfo"></ol>
+
+    <script>
+
+        fetch("files/students.json")
+            .then(response => response.json())
+            .then(data => {
+                let students = data.wclass;
+                let listinfo = document.getElementById("studentinfo");
+
+                students.forEach(item => {
+                    let info = item.student;
+                    let list = document.createElement("li");
+                    list.innerHTML = `${info["@attributes"].id} <b>${info.name}</b> has skills <i>${info.skill}</i>`;
+                    listinfo.appendChild(list);
+                });
+            })
+            .catch(err => {
+
+            });
+    </script>
+</body>
+
+</html>
