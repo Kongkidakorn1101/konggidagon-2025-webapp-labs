@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id = "res"></div>
+    <script>
+        fetch("files/places.json").then(response => {
+            return response.json();
+        }).then(data => {
+            results = data.results;
+            let res = "<ol>";
+                for (let result of results) {
+                    res += "<li><div style=color:blue>" + " name =" + result.name
+                         + "</div> <div style=color:green>location =" + result.geometry.location.lat 
+                            + " " + result.geometry.location.lng + "</div></li>";
+                }
+                document.getElementById("res").innerHTML = res;
+        }).catch(err => {
+            
+        });
+
+    </script>
+</body>
+
+</html>
