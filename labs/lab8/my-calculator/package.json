@@ -1,0 +1,16 @@
+{
+  "name": "my-calculator",
+  "version": "1.0.0",
+  "description": "this is a module for operators add or subtract",
+  "main": "calculator.js",
+  "type": "module",
+  "scripts": {
+    "calculator": "node calculator.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.9.6"
+  }
+}
