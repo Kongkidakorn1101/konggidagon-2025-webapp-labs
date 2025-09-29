@@ -10,10 +10,10 @@ async function getWeather(city) {
 
         let data = response.data;
         let location = data.location.name;
-        let tempC = data.current.temp_c;
+        let temp = data.current.temp;
         let condition = data.current.condition.text;
 
-        console.log(`Current temperature in ${location} is ${tempC}°C`);
+        console.log(`Current temperature in ${location} is ${temp}°C`);
         console.log(`Weather condition: ${condition}`);
     } catch (error) {
         console.error("Error: Unable to fetch weather information.");
