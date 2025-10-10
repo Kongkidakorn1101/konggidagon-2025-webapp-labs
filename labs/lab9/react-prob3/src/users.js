@@ -1,4 +1,4 @@
-export const users = [
+export let users = [
     {
         url: "https://github.com/Kongkidakorn1101",
         imgURL: "https://avatars.githubusercontent.com/u/151110747?v=4",
